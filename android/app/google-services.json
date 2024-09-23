@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "600898880212",
+    "firebase_url": "https://taubatexas-37c12-default-rtdb.firebaseio.com",
+    "project_id": "taubatexas-37c12",
+    "storage_bucket": "taubatexas-37c12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600898880212:android:f63aa31ac7bb546e41b141",
+        "android_client_info": {
+          "package_name": "com.example.taubatexas_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCerVqtMUIcPQTA5mXSPUk2FRGDS_GAuZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
