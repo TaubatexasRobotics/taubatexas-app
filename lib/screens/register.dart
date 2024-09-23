@@ -83,7 +83,7 @@ class Register extends StatelessWidget {
 									),
 								),
 								TextButton(
-									onPressed: () => print('Teste'),
+									onPressed: () => Navigator.of(context).pushNamed('/login'),
 									child: SizedBox(
 										width: dimensions.width * 0.8,
 										height: 50,

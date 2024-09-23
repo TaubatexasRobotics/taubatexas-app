@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../controllers/auth.dart';
 
 class Login extends StatelessWidget {
 	const Login({ super.key });
@@ -57,7 +58,14 @@ class Login extends StatelessWidget {
 									),
 								),
 								TextButton(
-									onPressed: () => print('Teste'),
+									onPressed: () async {
+										final login = await Auth.login(
+											email: 'joao',
+											password: 'oi'
+										);
+
+										print(login);
+									},
 									child: SizedBox(
 										width: dimensions.width * 0.8,
 										height: 50,
@@ -75,7 +83,7 @@ class Login extends StatelessWidget {
 									),
 								),
 								TextButton(
-									onPressed: () => print('Teste'),
+									onPressed: () => Navigator.of(context).pushNamed('/register'),
 									child: SizedBox(
 										width: dimensions.width * 0.8,
 										height: 50,
@@ -90,6 +98,13 @@ class Login extends StatelessWidget {
 												style: Theme.of(context).textTheme.labelMedium,
 											),
 										),
+									),
+								),
+								TextButton(
+									onPressed: () => print('Teste'),
+									child: Text(
+										'Esqueceu a senha?',
+										style: Theme.of(context).textTheme.labelSmall,
 									),
 								),
 							],
