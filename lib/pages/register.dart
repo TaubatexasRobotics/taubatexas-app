@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
-	const Login({ super.key });
-	
+class Register extends StatelessWidget {
+	const Register({ super.key });
+
 	@override
 	Widget build(BuildContext context) {
 		final dimensions = MediaQuery.of(context).size;
@@ -16,8 +16,22 @@ class Login extends StatelessWidget {
 								Padding(
 									padding: const EdgeInsets.symmetric(vertical: 10),
 									child: Text(
-										'Login',
+										'Insira os dados abaixo',
 										style: Theme.of(context).textTheme.titleLarge,
+									),
+								),
+								SizedBox(
+									width: dimensions.width * 0.8,
+									child: TextFormField(
+										decoration: const InputDecoration(
+											icon: Icon(Icons.accessibility_new_rounded),
+											border: OutlineInputBorder(
+												borderRadius: const BorderRadius.all(Radius.circular(20)),
+											),
+											hintText: 'José da Silva',
+											labelText: 'Nome completo',
+											helperText: '',
+										),
 									),
 								),
 								SizedBox(
@@ -33,12 +47,6 @@ class Login extends StatelessWidget {
 											labelText: 'E-mail',
 											helperText: '',
 										),
-										validator: (value) {
-											RegExp regex = RegExp(r'/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i');
-											if(!regex.hasMatch(value!))
-												return 'E=mail inválido!';
-											return '';
-										},
 									),
 								),
 								SizedBox(
@@ -68,7 +76,7 @@ class Login extends StatelessWidget {
 												color: Theme.of(context).colorScheme.primary,
 											),
 											child: Text(
-												'Fazer Login',
+												'Criar Conta',
 												style: Theme.of(context).textTheme.labelMedium,
 											),
 										),
@@ -86,7 +94,7 @@ class Login extends StatelessWidget {
 												color: Theme.of(context).colorScheme.primary,
 											),
 											child: Text(
-												'Criar Conta',
+												'Voltar',
 												style: Theme.of(context).textTheme.labelMedium,
 											),
 										),
