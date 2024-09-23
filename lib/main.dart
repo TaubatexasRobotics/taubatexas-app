@@ -12,7 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+				colorScheme: ColorScheme.fromSeed(
+					seedColor: Colors.blue,
+					brightness: Brightness.light,
+					primary: Colors.blue[900],
+					secondary: Colors.lightBlue,
+				),
         useMaterial3: true,
 				textTheme: TextTheme(
 					bodyMedium: TextStyle(
@@ -21,6 +26,12 @@ class MyApp extends StatelessWidget {
 					titleLarge: TextStyle(
 						fontFamily: "Bebas Neue",
 						fontSize: 40,
+					),
+					labelMedium: TextStyle(
+						fontFamily: "Roboto",
+						fontSize: 20,
+						color: Colors.white,
+						fontWeight: FontWeight.w700
 					),
 				),
       ),
