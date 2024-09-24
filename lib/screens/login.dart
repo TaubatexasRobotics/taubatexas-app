@@ -20,14 +20,25 @@ class Login extends StatelessWidget {
 					child: Column(
 						mainAxisSize: MainAxisSize.min,
 						children: [
-							Padding(
-								padding: const EdgeInsets.symmetric(vertical: 10),
-								child: Text(
-									'Login',
-									style: Theme.of(context).textTheme.titleLarge,
-								),
+							Row(
+								mainAxisAlignment: MainAxisAlignment.center,
+								children: [
+									Image.asset(
+										'images/taubatexas_logo.png',
+										width: dimensions.width * 0.3,
+										height: dimensions.width * 0.3,
+									),
+									Padding(
+										padding: const EdgeInsets.symmetric(vertical: 10),
+										child: Text(
+											'Login',
+											style: Theme.of(context).textTheme.titleLarge,
+										),
+									),
+								],
 							),
-							SizedBox(
+							Container(
+								padding: const EdgeInsets.symmetric(vertical: 5),
 								width: dimensions.width * 0.8,
 								child: TextFormField(
 									controller: emailController,
@@ -42,10 +53,10 @@ class Login extends StatelessWidget {
 										helperText: '',
 										errorText: loginValidationModel.emailError,
 									),
-									onChanged: (value) => loginValidationModel.setEmail(value),
 								),
 							),
-							SizedBox(
+							Container(
+								padding: const EdgeInsets.symmetric(vertical: 5),
 								width: dimensions.width * 0.8,
 								child: TextFormField(
 									controller: passwordController,
@@ -63,6 +74,7 @@ class Login extends StatelessWidget {
 										hintText: 'Digite a sua senha',
 										labelText: 'Senha',
 										helperText: '',
+										errorText: loginValidationModel.passwordError,
 									),
 								),
 							),
